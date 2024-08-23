@@ -1,0 +1,343 @@
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Sprout'n'Sparkle</title>
+        <style>
+            body
+            {
+                font-family: 'comic sans MS', cursive, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: whitesmoke;
+                color: #333;
+            }
+            header
+            {
+                background-color: white;
+                color: red;
+                padding: 10px;
+                text-align:center;
+            }
+            header img
+            {
+                max-width: 250px;
+            }
+            nav
+            {
+                background-color: #ffe817;
+                padding: 5px;
+                text-align: center;
+
+            }
+            nav a
+            {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+                text-align: center;
+                padding: 60px 20px;
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+            .hero-section
+            {
+                background-color: #4235b8;
+                color: white;
+                text-align: center;
+                padding: 60px 20px;
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+            .container
+            {
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .about
+            {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .about h2
+            {
+                font-size: 2.5em;
+                color: #ff6f61;
+            }
+            .about p
+            {
+                font-size: 1.2em;
+                color: #333;
+            }
+            .product-slideshow
+            {
+                position: relative;
+                max-width: 100%;
+                margin: auto;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0px 4px 6px rgba (0, 0, 0.1);
+
+            }
+            .slides 
+            {
+                display: none;
+            }
+            .slides img
+            {
+                width: 100px;
+                border-radius: 10px;
+            }
+            .caption
+            {
+                text-align: center;
+                font-size: 1.5em;
+                color: #ff6f61;
+                padding: 10px 0;
+            }
+            .availability
+            {
+                font-weight: bold;
+                color: green;
+                margin-top: 10px;
+            }
+            .availability.out-of-stock
+            {
+                color: red;
+            }
+            .add-to-cart
+            {
+                display: inline-block;
+                background-color: #ff6f61;
+                color: white;
+                padding: 10px 20px;
+                margin-top: 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .add-to-cart:hover
+            {
+                background-color: #ff4c4c;
+            }
+            .prev, .next
+            {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color:white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px3px 0;
+                user-select: none;
+
+            }
+            .next
+            {
+                right: 0;
+                border-radius: 3px0 0 3px;
+            }
+            .prev:hover, .next:hover
+            {
+                background-color: rgba (0, 0, 0, 0.8);
+            }
+            .dots 
+            {   text-align: center;
+                padding:10px 0;
+                background-color: #ffcc5c;
+                border-radius: 5px;
+            }
+            .dot 
+            {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            .active, .dot:hover
+            {
+                background-color: #ff6f61;
+            }
+            .contact-section
+            {
+                background-color: #4235b8;
+                color: white;
+                padding: 40px;
+                text-align: center;
+            }
+            .contact-section h2
+            {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            .contact-section p
+            {
+                margin: 10px 0;
+                font-size: 1.2em;
+            }
+            .contact-section a
+            {
+                color: #ffcc5c;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .social-media
+            {
+                background-color: #4235b8;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            .social-media h2
+            {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            .social-media a
+            {
+                margin: 0 5px;
+                background-color: #11038b;
+                padding: 10px 15px;
+                border-radius: 5px;
+                display: inline-block;
+                color: white;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+            .social-media a:hover
+            {
+                background-color: #4235b8;
+            }
+            footer
+            {
+                background-color: #ff6f61;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+            footer p
+            {
+                margin: 5px 0;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="sprout'n'sparkle.JPG" alt="sprout'n'sparkle.JPG">
+            <h1>Sprout'n'Sparkle Thrift Wears</h1>
+            <p>Your one-stop shop for Trendy Kids' Fashion</p>
+        </header>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#product">Product</a>
+            <a href="#contact">Contact</a>
+            <a href="#social">Social</a>
+        </nav>
+        <section class="hero-section">
+            <p>Discover Affordable & Stylish Wears for Kids!</p>
+        </section>
+        <div class="container">
+            <section class="about" id="about">
+                <h2>About Us</h2>
+                <p>Welcome to Sprout'n'Sparkle Kiddies Wears Store! We specialize in providing trendy, affordable clothing and accessories for kids. 
+                   Our mission is to offer high-quality product that bring joy and style to your little ones' wardropes.
+                   Shope with us and discover the magic of thrifting beautiful and classy clothings for your bundle of joy!
+                </p>
+            
+            </section>
+            <section class="product-slideshow" id="products">
+                <h2>Our Products</h2>
+                <div class="slide">
+                    <img src="sproutnsparkle5.jpg" alt="Adorable Jean Set">
+                    <div class="caption">Adorable Jean Set - N18,000 <span class="availability out-of-stock"> Out of Stock</span></div>
+                 <a href="#" class="add-to-cart">Add to Cart</a></div>
+                <div class="slide">
+                    <img src="sproutnsparkle9.jpg" alt="Bright Green Short&Top Set">
+                    <div class="caption"> Bright Green Short&Top Set - N17,000 <span class="availability"> In Stock</span></div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                </div>
+            <div class="slide">
+                <img src="sproutnsparkle11.jpg" alt="Cute Shorts for Boys">
+                <div class="caption">Cute Shorts for Boys - N7000 <span class="availability "> In Stock</span></div>
+                <a ref="#" class="add-to-cart">Add to Cart</a>
+            </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(2)">&#10094;</a>
+            </section>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <section class="contact-section" id="contact">
+                <h2>Contact Us</h2>
+                <p>Address: 11th Road, Gowon Estate, Egbeda, Lagos</p>
+                <p>Phone: +234-8127394866, +234-8169030499</p>
+                <p>Email: sprout'n'sparklekiddies@gmail.com</p>
+                <p><a href="#"Click here to contact us directly!></a></p>
+            </section>
+            <!--Social Media Section-->
+            <section class="social-media" id="social">
+                <h2>Follow Us</h2>
+                <a href="https://www.sprout_sparklekiddies.com" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/in/ChigozieDumebi" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ChigozieDumebi" target="_blank">github</a>
+                <a href="https://wa.me/08169030499" taget="_blank">Whatsapp</a>
+            </section>
+
+        </div> 
+                <footer>
+                    <p>&copy; 2024 Sprout'n'Sparkle Thrift Wears. All right reserved.</p>
+                    <p><a href="#about">About Us</a> |
+                    <a href="#products">Products</a> |
+                    <a href="#contact">Contact Us</a> |
+                    <a href="#social">Follow Us</a></p>
+                </footer>
+                <script>
+                    let slideIndex = 1;
+                    showSlide (slideIndex);
+
+                    function plusSlides(n)
+                    {
+                        showSlides(slideIndex += n);
+                    }
+                    function currentSlide (n)
+                    {
+                    showSlides (slideIndex = n);
+                    }
+                    function showSlides (n)
+                    {
+                        let i;
+                        let slides=document.getElementsByClassName("slides");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length){slideIndex=1}
+                        if (n < 1) {slideIndex=slide.length}
+                        for (i =0; i < slides.length; i++)
+                    {slides[i].style.display="none";  
+                    }
+                    for (i=0; i < dots.length; i++)
+                    {
+                        dots[i].className = dots[i].className.replace(" active","");
+                    }
+                        slides[slideIndex - 1],style.display="block";dots[slideIndex - 1].className += "active";
+                    }
+
+                </script>
+        
+    </body>
+ </html>
